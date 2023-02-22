@@ -1,0 +1,240 @@
+{
+    "icones": {
+        "logo": "IMAGES/MARCONEO-icon.ico",
+        "titleDark": "MarcoNeo.png",
+        "titleBright": "MarcoNeo_blanc.jpg",
+        "reset": "reset.png",
+        "appuyez": "appuyez-pour-demarrer.png",
+        "enter": "entrer3.png",
+        "info": "info.png",
+        "credits": "credits.png",
+        "version": "version.png",
+        "settings": "dent.png",
+        "settings-red": "reglages-rouge.png",
+        "switch-on": "switch-on.png",
+        "switch-off": "switch-off.png",
+        "quit": "power.png",
+        "shut-down": "eteindre.png",
+        "confirm": "confirmer.png",
+        "confirmRed": "confirmer-rouge.png",
+        "cancel": "cancel.png",
+        "exit": "sortie.png",
+        "IDcard": "cartonID.png",
+        "ID": "ID.png",
+        "shop": "achats.png",
+        "recharge": "rechargement.png",
+        "recharge-icon": "rechargement-argent.png",
+        "history": "histo.png",
+        "histo": "historique.png",
+        "score": "scores.png",
+        "trophy": "trophee.png",
+        "basket": "panier.png",
+        "dish": "repas.png",
+        "gouter": "gouter.png",
+        "party": "soiree.png",
+        "minus": "moins.png",
+        "sandwich": "sandwich.png",
+        "discard": "poubelle.png",
+        "help": "help.png",
+        "commande": "commande.png",
+        "crown": "couronne.png",
+        "admin?": "admin-question.png",
+        "price-settings": "reglages-prix.png",
+        "N0": "numero0.png",
+        "N1": "numero1.png",
+        "N2": "numero2.png",
+        "N3": "numero3.png",
+        "N4": "numero4.png",
+        "N5": "numero5.png",
+        "N6": "numero6.png",
+        "N7": "numero7.png",
+        "N8": "numero8.png",
+        "N9": "numero9.png",
+        "coma": "virgule.png",
+        "enter-price": "entrer-prix.png",
+        "default": "defaut.png",
+        "disco": "boule-disco.png",
+        "club-shots": "club-shots-icon.png",
+        "club-shots-logo": "club-shots.png",
+        "club-oeno": "club-oeno.png",
+        "up": "vers-le-haut.png",
+        "down": "vers-le-bas.png",
+        "morning": "matin.png",
+        "noon": "midi.png",
+        "night": "soir.png"
+    },
+    "command_menus": {
+        "menu-midi": {
+            "name": "Midi",
+            "icon": "sandwich.png",
+            "require_admin": false,
+            "items": [
+                {
+                    "name": "pizza",
+                    "icon": "pizza.png",
+                    "value": 2.60
+                },
+                {
+                    "name": "sandwich",
+                    "icon": "sand80.png",
+                    "value": 1.60
+                },
+                {
+                    "name": "nouilles",
+                    "icon": "nouilles.png",
+                    "value": 1.0
+                },
+                {
+                    "name": "repas",
+                    "icon": "nourriture.png",
+                    "value": 1.0
+                },
+                {
+                    "name": "dessert",
+                    "icon": "gateau.png",
+                    "value": 0.50
+                }
+            ]
+        },
+        "menu-soirees": {
+            "name": "Soirees",
+            "icon": "boule-disco.png",
+            "require_admin": false,
+            "items": [
+                {
+                "name": "biere12",
+                "icon": "primus.jpg",
+                "value": 1.2
+                },
+                {
+                    "name": "biere16",
+                    "icon": "kasteelRed0.jpg",
+                    "value": 1.6
+                },
+                {
+                    "name": "cocktail12",
+                    "icon": "cocktail12.png",
+                    "value": 1.2
+                },
+                {
+                    "name": "cocktail16",
+                    "icon": "cocktail16.png",
+                    "value": 1.6
+                },
+                {
+                    "name": "biere-bouteille",
+                    "icon": "biere-bouteille.png",
+                    "value": 3.6
+                }
+            ]
+        },
+        "menu-shots": {
+            "name": "Shots",
+            "icon": "club-shots.png",
+            "require_admin": false,
+            "items": [
+                {
+                    "name": "shot",
+                    "icon": "shot.png",
+                    "value": 0.5
+                },
+                {
+                    "name": "metre-shot",
+                    "icon": "metre-shot.png",
+                    "value": 4
+                }
+            ]
+        },
+        "menu-oeno": {
+            "name": "Oeno",
+            "icon": "club-oeno.png",
+            "require_admin": false,
+            "items": [
+                {
+                    "name": "charcuterie",
+                    "icon": "viande.png",
+                    "value": 0.75
+                },
+                {
+                    "name": "fromage",
+                    "icon": "fromage.png",
+                    "value": 0.75
+                },
+                {
+                    "name": "verre-de-vin",
+                    "icon": "verre.png",
+                    "value": 2
+                },
+                {
+                    "name": "bouteille-vin",
+                    "icon": "bouteille-vin.png",
+                    "value": 8
+                }
+            ]
+        },
+        "menu-gouter": {
+            "name": "Goûter",
+            "icon": "chocolat.png",
+            "require_admin": false,
+            "items": [
+                {
+                    "name": "0,20",
+                    "icon": "doowap.png",
+                    "value": 0.2
+                },
+                {
+                    "name": "0,30",
+                    "icon": "muffin.png",
+                    "value": 0.3
+                },
+                {
+                    "name": "0,4",
+                    "icon": "gauffre.png",
+                    "value": 0.4
+                },
+                {
+                    "name": "Canette",
+                    "icon": "canette.png",
+                    "value": 0.7
+                },
+                {
+                    "name": "Cookies",
+                    "icon": "biscuit.png",
+                    "value": 1
+                }
+            ]
+        },
+        "menu-recharge": {
+            "name": "Rechargement",
+            "icon": "rechargement-argent.png",
+            "require_admin": true,
+            "items": [
+                {
+                    "name": "rech1",
+                    "icon": "numero-1.png",
+                    "value": -1
+                },
+                {
+                    "name": "rech5",
+                    "icon": "numero-5.png",
+                    "value": -5
+                },
+                {
+                    "name": "rech10",
+                    "icon": "numero-10.png",
+                    "value": -10
+                },
+                {
+                    "name": "rech20",
+                    "icon": "numero-20.png",
+                    "value": -20
+                },
+                {
+                    "name": "rech50",
+                    "icon": "numero-50.png",
+                    "value": -50
+                }
+            ]
+        }
+    }
+}
