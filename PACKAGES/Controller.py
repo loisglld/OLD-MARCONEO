@@ -165,7 +165,7 @@ class Controller:
             return True
     
     def readPwd(self):
-        pwdPath = os.path.abspath(os.getcwd()) + '\\PACKAGES\\pwd.txt'
+        pwdPath = os.path.join(os.path.join(os.path.abspath(os.getcwd()), 'PACKAGES'),'pwd.txt')
         with open(pwdPath, 'r') as f:
             lines = f.readlines()
             self.HOST = lines[0].strip()
