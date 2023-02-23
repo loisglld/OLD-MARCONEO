@@ -14,6 +14,7 @@ from PACKAGES.Cotisant import *
 from datetime import datetime
 import mysql.connector as mysql
 import os
+import socket
 
 #-------------------------------------------------------------------#
 
@@ -37,24 +38,26 @@ class Controller:
         
         # Mots de passe et identifiants de connexion à la base de données
         self.readPwd()
-        
+
         print(f"Connexion à la base de données {self.DATABASE.upper()}...")
         try:           
             self.conn = mysql.connect(host=self.HOST,
-                                 database=self.DATABASE,
-                                 user=self.USER,
-                                 password=self.PASSWORD,
-                                 port=self.PORT)      
-
+                                    database=self.DATABASE,
+                                    user=self.USER,
+                                    password=self.PASSWORD,
+                                    port=self.PORT)
             if self.conn.is_connected():
-                print("Connecté à: ", self.conn.get_server_info())
-                
+                #print("Connecté à: ", self.conn.get_server_info())
+                print("Connecté à la base de données.")
+
         except:
             print("Erreur lors de la connexion à la base de donnée.")
-            print("Sûrement dû à un problème de connexion internet.")
+            if has_ipv6():
+                print("La machine a une adresse IPv6")
+            else:
+                print("La machine n'a pas d'adresse IPv6")
             exit(1)
 
-        #self.conn = conn
         self.app = app # Application actualisée
     
     def close(self):
@@ -173,3 +176,24 @@ class Controller:
             self.USER = lines[2].strip()
             self.PASSWORD = lines[3].strip()
             self.PORT = int(lines[4].strip())
+
+def has_ipv6():
+    try:
+        # Créer une socket pour l'IPv6
+        sock = socket.socket(socket.AF_INET6, socket.SOCK_DGRAM)
+
+        # Bind la socket à une adresse IPv6 quelconque et un port aléatoire
+        sock.bind(('::', 0))
+
+        # Récupérer l'adresse IPv6 de la socket
+        addr = sock.getsockname()[0]
+
+        # Fermer la socket
+        sock.close()
+
+        # Si l'adresse IPv6 est définie, la machine a une adresse IPv6
+        return bool(addr)
+
+    except:
+        # Si une exception est levée, la machine n'a pas d'adresse IPv6
+        return False

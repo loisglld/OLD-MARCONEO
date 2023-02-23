@@ -51,7 +51,7 @@ class MarcoNeo:
         self.scannerActive = True
         self.rfidBuf = ""
         self.oldUser = None
-        #self.controller = Controller(self) # Se connecte à la base de données MySQL des cotisants BDE
+        self.controller = Controller(self) # Se connecte à la base de données MySQL des cotisants BDE
         self.menuParent = None
         
         self.readConfig()
