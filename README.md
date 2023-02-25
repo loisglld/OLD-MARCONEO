@@ -398,7 +398,7 @@ Pour plus d'informations sur Docker, vous pouvez consulter la [documentation off
 | V0.2.0 & V0.3.0 | Clément Rossetti (Promo 2022) |
 | V0.4.1 | Hugo Chambon (Fouaille BDE 2021), Nathan Favriou (Président Ensorceliste), Jade Touresse (Fouaille BDE 2021) |
 | V0.4.2 | Yannick Hénin (Ext BDE 2022) |
-| V0.4.3 & V0.4.4 | Gatien Chenu (Int BDE 2021), Mathieu Martin (Ext BDE 2022) |
+| V0.4.3 & V0.4.4 | Gatien Chenu (Int BDE 2022), Mathieu Martin (Ext BDE 2022) |
 | V0.5.0 | Loïs Gallaud (Tech Prélistoire) |
 
 ---
