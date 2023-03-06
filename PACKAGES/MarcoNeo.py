@@ -1,9 +1,9 @@
-#coding: utf-8
-
 """
-Marconeo.py
+MarcoNeo.py
 
-Définit la classe Marconeo.
+Définit la classe de l'app MarcoNeo.
+La classe MarcoNeo encapsule toute la logique de l'application ainsi
+que les connexions à la base de données et au lecteur RFID.
 """
 
 #-------------------------------------------------------------------#
@@ -23,9 +23,9 @@ import decimal
 
 class MarcoNeo:
     """
-    Classe de l'application MARCONEO.
-    
-    Singleton qui encapsule toute la logique de l'application.
+    Classe de l'app MarcoNeo.
+    La classe MarcoNeo encapsule toute la logique de l'application ainsi
+    que les connexions à la base de données et au lecteur RFID.
     """
 
     VERSION = "0.5.3"
@@ -37,8 +37,7 @@ class MarcoNeo:
         Crée un log selon le modèle du config.json.
         Crée un interface graphique Tkinter.
         """
-
-        self.logger = None # Journal d'activité de la MARCONEO
+        
         self.config = None # Fichier json de configuration des données
         self.root = None # Fenêtre Tkinter associée
         self.currentView = None
@@ -51,9 +50,9 @@ class MarcoNeo:
         self.scannerActive = True
         self.rfidBuf = ""
         self.oldUser = None
-        self.controller = Controller(self) # Se connecte à la base de données MySQL des cotisants BDE
         self.menuParent = None
         
+        self.controller = Controller(self) # Se connecte à la base de données MySQL des cotisants BDE
         self.readConfig()
         self.initLog()
         self.log.info(f"Démarrage de MARCONEO v{MarcoNeo.VERSION}...")

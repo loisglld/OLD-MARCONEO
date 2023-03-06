@@ -18,5 +18,7 @@ if __name__ == "__main__":
     print("Lancement de la MARCONEO...")
     app = MarcoNeo()
     app.setView(MenuPrincipal)
+    #print(dir(app)) enumere tous les attributs de la classe MarcoNeo
     app.start()
     app.refreshLog()
+    
