@@ -98,7 +98,7 @@ class MenuConso(MenuBasique):
         self.labelCommande.place(x=x0//2-12*self.sortir_img.sizeX//8, y=y0-5*self.sortir_img.sizeY//4)
         self.totalFrame.place(x=x0//2-3*self.sortir_img.sizeX//8, y=y0-18*self.sortir_img.sizeY//16)
         
-        self.app.currentUserFrame = CarteUtilisateur(consoCanvas, self.app.currentUser, self.app)
+        self.app.currentUserFrame = CarteUtilisateur(consoCanvas, self.app.current_user, self.app)
         
     def sortir(self):
         if self.app.menuParent == "achats":

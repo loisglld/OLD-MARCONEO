@@ -49,7 +49,7 @@ class MenuAchats(MenuBasique):
         self.btnGouter.place(x=x0//2-2*SMALLBTN//16+2*VERYSMALLTXT, y=y0//2-21*CHOIXY//32)
         self.btnSoiree.place(x=x0//2-self.soiree_img.sizeX//2, y=y0//2+7*CHOIXY//8)
         
-        self.app.currentUserFrame = CarteUtilisateur(achatsCanvas, self.app.currentUser, self.app)
+        self.app.currentUserFrame = CarteUtilisateur(achatsCanvas, self.app.current_user, self.app)
         
     def sortir(self):
         #self.app.log.debug("Retour sur le menu des choix.")

@@ -48,7 +48,7 @@ class MenuChoix(MenuBasique):
         self.btnHisto.place(x=x0//2, y=y0//2+7*CHOIXY//8)
         self.btnScore.place(x=6*SMALLBTN//16+10*CHOIXY//24, y=y0//2+19*CHOIXY//24)
         
-        self.app.currentUserFrame = CarteUtilisateur(choixCanvas, self.app.currentUser, self.app)
+        self.app.currentUserFrame = CarteUtilisateur(choixCanvas, self.app.current_user, self.app)
         
     def sortir(self):
         #self.app.log.debug("Retour sur le menu principal.")

@@ -107,7 +107,7 @@ class MarcoNeo:
         self.logName = "MARCONEO" # Majuscules pour que ça soit plus cool (c'est plus cool soyons francs)
         self.logFormat = "%(asctime)s - %(name)s - %(levelname)s - %(message)s" # Format d'affichage des info dans le log
         self.logDateFormat = "%Y-%m-%d %I:%M:%S"
-        self.logOutPath = os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), "LOG")) # Chemin absolu vers le dossier LOG
+        self.logOutPath = os.path.abspath(os.path.join(os.getcwd(), "LOG")) # Chemin absolu vers le dossier LOG
         self.logPath = os.path.join(self.logOutPath, self.logName + ".log")
 
         # Création du dossier LOG s'il n'existe pas
@@ -178,6 +178,7 @@ class MarcoNeo:
         self.root.attributes('-fullscreen', True)
         #self.root.state('zoomed')
         self.root.minsize(800, 480)
+        self.root.protocol("WM_DELETE_WINDOW", self.quit)
 
         """self.x0 = self.root.winfo_screenwidth()
         self.y0 = self.root.winfo_screenheight()"""

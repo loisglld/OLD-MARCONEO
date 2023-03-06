@@ -48,7 +48,7 @@ class MenuAdminCheck(MenuBasique):
         self.btnSortir.place(x=3*self.Icon_img.sizeX//8, y=3*self.Icon_img.sizeY//8)
         self.btnAppuyez.place(x=x0//2-self.avncer_img.sizeX//2,y=y0//2+3*self.avncer_img.sizeY//16)
         
-        self.app.currentUserFrame = CarteUtilisateur(adminCanvas, self.app.currentUser, self.app)
+        self.app.currentUserFrame = CarteUtilisateur(adminCanvas, self.app.current_user, self.app)
         
     def isAmdinDetected(self, event=None):
         if self.app.currentUser.admin != 0:

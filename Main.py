@@ -9,7 +9,7 @@ Lance l'application.
 
 #-------------------------------------------------------------------#
 
-from PACKAGES.MarcoNeo import *
+from PACKAGES.MarcoNeo import MarcoNeo
 from PACKAGES.INTERFACE.MenuPrincipal import MenuPrincipal
 
 #-------------------------------------------------------------------#

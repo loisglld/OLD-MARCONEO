@@ -52,7 +52,7 @@ class MenuValider(MenuBasique):
         self.labelCommande.place(x=x0//2-5*SMALLBTN//2-9*self.panierCommande_img.sizeX//8+SMALLBTN//4,y=2*SMALLBTN-self.panierCommande_img.sizeY//6)
         self.labelTotal.place(x=x0//2-5*SMALLBTN//2+SMALLBTN//4,y=2*SMALLBTN)
 
-        self.app.currentUserFrame = CarteUtilisateur(self, self.app.currentUser, self.app)
+        self.app.currentUserFrame = CarteUtilisateur(self, self.app.current_user, self.app)
 
         self.bind("<Destroy>", self.onDestroy)
 

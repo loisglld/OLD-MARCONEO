@@ -47,7 +47,7 @@ class MenuHisto(MenuBasique):
         self.histoFrame.place(x=2*SMALLBTN//3, y=3*IDY//2)
         
         self.historique = HistoriqueApp(self.app, self.histoFrame, histoCanvas)
-        self.app.currentUserFrame = CarteUtilisateur(histoCanvas, self.app.currentUser, self.app)
+        self.app.currentUserFrame = CarteUtilisateur(histoCanvas, self.app.current_user, self.app)
         
     def sortir(self):
         from PACKAGES.INTERFACE.CHOIX.MenuChoix import MenuChoix
