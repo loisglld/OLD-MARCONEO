@@ -132,7 +132,7 @@ class Controller:
                     if nombreProduit != 0:
                         prixRequete = prixProduit*nombreProduit
                         requete="INSERT INTO Commande (id,numero_carte,nom,prenom,old_note,new_note,delta,type_produit,date_histo,utilisateur_histo,amount,produit) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
-                        cursor.execute(requete,(currentUser.id,currentUser.numero_carte,currentUser.nom,currentUser.prenom,solde,solde-prixRequete,-prixRequete,parent_menu_name,str(datetime.now()),self.app.config["logging"]["name"],nombreProduit, nomProduit))
+                        cursor.execute(requete,(currentUser.id,currentUser.numero_carte,currentUser.nom,currentUser.prenom,solde,solde-prixRequete,-prixRequete,parent_menu_name,str(datetime.now()),"MARCONEO",nombreProduit, nomProduit))
                         self.conn.commit() # Confirme l'actualisation des données
                     solde -= prixRequete
             except Exception as e:
@@ -152,7 +152,7 @@ class Controller:
             try:
                 cursor = self.conn.cursor()
                 requete="INSERT INTO Commande (numero_carte,nom,prenom,old_note,new_note,delta,date_histo,utilisateur_histo) VALUES(%s,%s,%s,%s,%s,%s,%s,%s)"
-                cursor.execute(requete,(currentUser.numero_carte,currentUser.nom,currentUser.prenom,currentUser.note,currentUser.note-amount,-amount,str(datetime.now()),self.app.config["logging"]["name"])) #On ne peut pas savoir qui a debloquer
+                cursor.execute(requete,(currentUser.numero_carte,currentUser.nom,currentUser.prenom,currentUser.note,currentUser.note-amount,-amount,str(datetime.now()),"MARCONEO")) #On ne peut pas savoir qui a debloquer
                 self.conn.commit()
             except Exception as e:
                 self.app.log.warn(f"Erreur lors de la publication de la recharge sur les commandes: {e}")
