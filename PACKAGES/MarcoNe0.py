@@ -157,8 +157,6 @@ class MarcoNeo:
     def quit(self):
         """
         Quits the application.
-        
-        Saves the session log into the day log.
         """
         
         self.root.destroy()
